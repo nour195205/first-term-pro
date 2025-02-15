@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>naastore</title>
+</head>
+
+<style>
+    .body {
+        background-image: url(background.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        backdrop-filter: blur(15px);
+    }
+    
+    header {
+        width: auto;
+        border-radius: 15px;
+        color: aliceblue;
+        background-color: rgb(30, 30, 111);
+        margin: auto;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .gender {
+        border-radius: 15px;
+        color: aliceblue;
+        background-color: rgb(30, 30, 111);
+        margin: auto;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .birth-day {
+        width: 100px;
+    }
+    
+    .date {
+        width: auto;
+        border-radius: 15px;
+        color: aliceblue;
+        background-color: rgb(30, 30, 111);
+        margin: auto;
+        text-align: center;
+        padding: 10px;
+    }
+</style>
+
+<body>
+
+    <header>
+        <h1>
+            naa store
+        </h1>
+    </header>
+    <br>
+    <main>
+        <div class="gender">
+
+            gender
+            <br>
+            <select name="gender" id="gender" title="">
+                <option value="male">male</option>
+                <option value="female">female</option>
+                <option value="other">other</option>
+            </select>
+        </div>
+        <br>
+        <div class="date">
+            birth day
+            <br>
+            <input class="birth-day" type="date" required>
+        </div>
+        <br>
+        <div>
+
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Chat App</title>
+</head>
+<style>
+    body {
+        font-family: sans-serif;
+    }
+    
+    .container {
+        width: 500px;
+        margin: 0 auto;
+    }
+    
+    .messages {
+        height: 300px;
+        overflow-y: auto;
+    }
+    
+    .message {
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+    
+    .message-sent {
+        background-color: #0080ff;
+    }
+    
+    .message-received {
+        background-color: #ffff00;
+    }
+    
+    .input-container {
+        margin-top: 20px;
+    }
+    
+    #message {
+        width: 300px;
+    }
+    
+    #send {
+        background-color: #0080ff;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+<script>
+    var messages = document.querySelector(".messages");
+    var messageInput = document.querySelector("#message");
+    var sendButton = document.querySelector("#send");
+
+    // هذه الدالة ستضاف الرسالة إلى قائمة الرسائل
+    function addMessage(message, type) {
+        var messageElement = document.createElement("div");
+        messageElement.classList.add("message");
+        if (type === "sent") {
+            messageElement.classList.add("message-sent");
+        } else {
+            messageElement.classList.add("message-received");
+        }
+        messageElement.textContent = message;
+        messages.appendChild(messageElement);
+    }
+
+    // هذه الدالة ستتم استدعاؤها عندما يتم النقر على زر الإرسال
+    sendButton.addEventListener("click", function() {
+        var message = messageInput.value;
+        addMessage(message, "sent");
+        messageInput.value = "";
+    });
+</script>
+
+<body>
+    <div class="container">
+        <h1>Simple Chat App</h1>
+        <div class="messages">
+        </div>
+        <div class="input-container">
+            <input type="text" id="message" placeholder="أكتب رسالتك هنا">
+            <button id="send">إرسال</button>
+        </div>
+    </div>
+</body>
+
+</html>
